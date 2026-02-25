@@ -56,7 +56,7 @@ def update_graph(region):
         df_select = df[df['region'] == region]
     else:
         df_select = df
-    fig = px.line(df_select, x='date', y='sales', labels={'date': "Date", 'sales': "Sales($)"})
+    fig = px.scatter(df_select, x='date', y='sales', labels={'date': "Date", 'sales': "Sales($)"})
     return fig
 
 if __name__ == '__main__':
